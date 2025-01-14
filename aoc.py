@@ -17,8 +17,6 @@ def main():
         # Load the input file from the day's directory
         input_filename = args.input or "input.txt"
         input_file = Path(f"{day}/{input_filename}")
-        if not input_file.exists():
-            raise FileNotFoundError(f"Input file not found: {input_file}")
 
         # Run the solution's main function (assumes each solution.py has a main())
         solution_module.main(str(input_file))
